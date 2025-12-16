@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: example=ghcr.io/lucasfernandez19/argocd-atscale
-    argocd-image-updater.argoproj.io/example.update-strategy: digest
-    argocd-image-updater.argoproj.io/example.allow-tags: regexp:^rc.*$
+    argocd-image-updater.argoproj.io/example.update-strategy: semver
+    argocd-image-updater.argoproj.io/example.allow-tags: regexp:^rc[0-9]+$
 spec:
   project: default
 
