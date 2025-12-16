@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: ghcr.io/lucasfernandez19/argocd-atscale:1.0
+        image: ghcr.io/lucasfernandez19/argocd-atscale:rc2
