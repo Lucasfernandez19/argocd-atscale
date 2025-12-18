@@ -17,6 +17,21 @@ spec:
     server: https://kubernetes.default.svc
     namespace: example02
 
+  ignoreDifferences:
+    # Para ignorar la annotation 'creation' del Deployment
+    - group: apps
+      kind: Deployment
+      name: simple-deployment
+      jqPathExpressions:
+        - .metadata.annotations.creation
+    
+    # Para ignorar el password del Secret (que es aleatorio)
+    - group: ""
+      kind: Secret
+      name: example-secret
+      jqPathExpressions:
+        - .data."my-password"
+  
   # Sync policy
   syncPolicy:
     syncOptions:
