@@ -5,11 +5,6 @@ metadata:
   name: simple-deployment
   namespace: example01
 spec:
-  ignoreDifferences:
-  - group: apps
-    kind: Deployment
-    jsonPointers:
-    - /spec/replicas
   replicas: 1
   selector:
     matchLabels:
